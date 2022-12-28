@@ -1,5 +1,8 @@
 #pragma once
 
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+
 /* RGB Matrix Configuration */
 #ifdef RGB_MATRIX_ENABLE
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
