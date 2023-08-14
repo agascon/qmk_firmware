@@ -31,7 +31,6 @@ enum layers{
 
 enum my_keycodes {
     KC_MCTRL = SAFE_RANGE,
-    KC_LPAD,
     M_ALT_A,
     M_ALT_E,
     M_ALT_I,
