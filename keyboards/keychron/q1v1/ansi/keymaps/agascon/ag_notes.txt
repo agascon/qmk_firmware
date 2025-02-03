@@ -1,0 +1,9 @@
+git filter-repo --debug \
+    --refs c2175f3bb55dbe6ba978fd807098e6e24d1b8a11..master \
+    --path-rename keyboards/keychron/q1/rev_0100/keymaps/agascon/config.h:keyboards/keychron/q1v1/ansi/keymaps/agascon/config.h \
+    --path-rename keyboards/keychron/q1/rev_0100/keymaps/agascon/keymap.c:keyboards/keychron/q1v1/ansi/keymaps/agascon/keymap.c \
+    --path-rename keyboards/keychron/q1/rev_0100/keymaps/agascon/rules.mk:keyboards/keychron/q1v1/ansi/keymaps/agascon/rules.mk \
+    --path-rename keyboards/keychron/q1/ansi/keymaps/agascon/config.h:keyboards/keychron/q1v1/ansi/keymaps/agascon/config.h \
+    --path-rename keyboards/keychron/q1/ansi/keymaps/agascon/keymap.c:keyboards/keychron/q1v1/ansi/keymaps/agascon/keymap.c \
+    --path-rename keyboards/keychron/q1/ansi/keymaps/agascon/rules.mk:keyboards/keychron/q1v1/ansi/keymaps/agascon/rules.mk \
+    --dry-run
