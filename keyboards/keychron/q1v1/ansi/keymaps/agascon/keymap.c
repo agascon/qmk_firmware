@@ -85,8 +85,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-
+bool sleptAndRgbMatrixDisabled = false;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    if (keycode == KC_SLEP) {
+        // if putting computer to sleep turn off RGB
+        rgb_matrix_disable();
+
+        sleptAndRgbMatrixDisabled = true;
+    } else if (sleptAndRgbMatrixDisabled) {
+        // turn on leds if previously we disabled it in any other keypresses
+        rgb_matrix_enable();
+
+        sleptAndRgbMatrixDisabled = false;
+    }
+
     switch (keycode) {
 
         case KC_MCTRL:
